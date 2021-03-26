@@ -1,8 +1,13 @@
 package ru.savinov.springcontext;
 
+import ru.savinov.springcontext.anotation.CalculateCatStrength;
+
 public class CombatCat {
+
     private String name;
-    private Integer strength = 1;
+
+    @CalculateCatStrength(minStrenght = 4, maxStrenght = 10)
+    private Integer strength;
 
     public java.lang.String getName() {
         return name;
@@ -12,11 +17,11 @@ public class CombatCat {
         this.name = name;
     }
 
-    public int getStrength() {
+    public Integer getStrength() {
         return strength;
     }
 
-    public void setStrength(int strength) {
+    public void setStrength(Integer strength) {
         this.strength = strength;
     }
 
