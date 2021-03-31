@@ -2,19 +2,20 @@ package ru.savinov.springcontext.anotation;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
+import org.springframework.stereotype.Component;
 import org.springframework.util.ReflectionUtils;
+
 import java.lang.reflect.Field;
 import java.util.Random;
 
-
-public class CalculateCatStranghtBeanPostProcessor implements BeanPostProcessor {
+public class CatStranghtCalculatorBeanPostProcessor implements BeanPostProcessor {
 
     /** все бины проходят через эти методы.
-     необходимо вычислить необходимый по наличии аннотации
+     *необходимо вычислить необходимый по наличии аннотации
      */
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
-        Field[] decalaredFields = bean.getClass().getFields();
+        Field[] decalaredFields = bean.getClass().getDeclaredFields();
         for (Field field : decalaredFields) {
             CalculateCatStrength annotation = field.getAnnotation(CalculateCatStrength.class);
             if (annotation != null) {

@@ -9,7 +9,7 @@ public class CombatCat {
     @CalculateCatStrength(minStrenght = 4, maxStrenght = 10)
     private Integer strength;
 
-    public java.lang.String getName() {
+    public String getName() {
         return name;
     }
 
