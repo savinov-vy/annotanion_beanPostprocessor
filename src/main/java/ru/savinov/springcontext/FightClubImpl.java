@@ -1,5 +1,8 @@
 package ru.savinov.springcontext;
 
+import ru.savinov.springcontext.anotation.PureTransactional;
+
+@PureTransactional
 public class FightClubImpl implements FightClub {
 
     private CombatCat loryCat;

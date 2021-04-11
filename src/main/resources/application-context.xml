@@ -5,6 +5,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 <context:annotation-config/>
     <bean class="ru.savinov.springcontext.anotation.CatStranghtCalculatorBeanPostProcessor"/>
+    <bean class="ru.savinov.springcontext.anotation.PureTransactionalBeanPostProcessor"/>
+
     <bean class="ru.savinov.springcontext.CombatCat" id="loryCat">
         <property name="name" value="Lory"/>
     </bean>
